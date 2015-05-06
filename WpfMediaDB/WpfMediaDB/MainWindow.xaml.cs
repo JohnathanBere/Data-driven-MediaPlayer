@@ -21,7 +21,6 @@ namespace WpfMediaDB
     /// </summary>
     public partial class MainWindow : Window
     {
-        // As database has extension .accdb
         private const String access7ConnectionString =
             @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\entries.accdb";
         // Data components
@@ -158,6 +157,23 @@ namespace WpfMediaDB
                 // Display the edited row
                 DisplayRow(currentRecord);
                 // Commit changes to database
+                UpdateDB();
+            }
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Get a new row from the data table
+            DataRow newRow = myDataTable.NewRow();
+            EditWindow editDialog = new EditWindow(newRow);
+            // this procedure is similiar to that of the modify button click event
+            if (editDialog.ShowDialog() == true)
+            {
+                myDataTable.Rows.Add(newRow);
+                // Locate the newly added row
+                currentRecord = myDataTable.Rows.IndexOf(newRow);
+                DisplayRow(currentRecord);
+                // Commit changes to changes database
                 UpdateDB();
             }
         }
