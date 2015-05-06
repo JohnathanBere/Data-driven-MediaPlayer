@@ -31,3 +31,5 @@ C:\Users\John Bere\Desktop\Assignment\WpfMediaDB\WpfMediaDB\bin\Debug\WpfMediaDB
 C:\Users\John Bere\Desktop\Assignment\WpfMediaDB\WpfMediaDB\bin\Debug\WpfMediaDB.application
 C:\Users\John Bere\Desktop\Assignment\WpfMediaDB\WpfMediaDB\obj\x86\Debug\WpfMediaDB.exe.manifest
 C:\Users\John Bere\Desktop\Assignment\WpfMediaDB\WpfMediaDB\obj\x86\Debug\WpfMediaDB.application
+C:\Users\John Bere\Desktop\Assignment\WpfMediaDB\WpfMediaDB\obj\x86\Debug\audioPlayer.baml
+C:\Users\John Bere\Desktop\Assignment\WpfMediaDB\WpfMediaDB\obj\x86\Debug\audioPlayer.g.cs

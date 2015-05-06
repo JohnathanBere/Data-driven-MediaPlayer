@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Data.OleDb;
+using Microsoft.Win32;
 
 namespace WpfMediaDB
 {
@@ -198,6 +199,16 @@ namespace WpfMediaDB
             {
                 MessageBox.Show("Error in methods of updating : \r\n" + ex.Message);
             }
+        }
+
+        private void openButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void exitMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
     }

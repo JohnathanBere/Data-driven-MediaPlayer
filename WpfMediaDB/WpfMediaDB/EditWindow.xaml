@@ -20,12 +20,6 @@
             <!-- Buttons go here -->
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0">
-            <MenuItem Header="_File">
-                <MenuItem Header="_Exit"/>
-            </MenuItem>
-        </Menu>
-
         <Grid Grid.Row="1">
             <!-- grid for input controls -->
             <!-- 4 rows-->

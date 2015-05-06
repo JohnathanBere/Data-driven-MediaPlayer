@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfMediaDB.audioPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="audioPlayer" Height="175" Width="750">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/><!-- Menu bar-->
+            <RowDefinition Height="*"/><!-- Content-->
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" Name="exitMenuButton" Click="exitMenuButton_Click"/>
+                <MenuItem Header="_Exit" Name="openMenuButton" Click="openMenuButton_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7">
+            <Button Content="Play/Pause" x:Name="playtoggleButton" Width="80" Height="30" Margin="0,0,10,0" Click="playToggleButton_Click" />
+            <Button Content="Stop" x:Name="stopButton" Width="80" Height="30" Margin="0,0,10,0" Click="stopButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
