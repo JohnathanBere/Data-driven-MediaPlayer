@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WpfMediaDB.exe" size="24064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WpfMediaDB.exe" size="25088">
       <assemblyIdentity name="WpfMediaDB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZoS0rqu+uwbVyNvPP2vpyecVtWo=</dsig:DigestValue>
+        <dsig:DigestValue>YVu0vgQlUhu8+p+APSDJtcvqzo0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="entries.accdb" size="413696">
+  <file name="entries.accdb" size="507904">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>NnY8CgKMnlGQq5QniD0ScutWCpM=</dsig:DigestValue>
+      <dsig:DigestValue>19/UqGyp/n0AlIG1qNIQIDFnUoE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -32,19 +32,7 @@ namespace WpfMediaDB
         // Index of the current record
         private int currentRecord = 0;
 
-        private void UpdateDB()
-        {
-            try
-            {
-                myConnection.Open();
-                myAdapter.Update(myDataTable);
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error in methods of updating : \r\n" + ex.Message);
-            }
-        }
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -175,6 +163,40 @@ namespace WpfMediaDB
                 DisplayRow(currentRecord);
                 // Commit changes to changes database
                 UpdateDB();
+            }
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to remove this song entry?", "Delete Record", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    // mark row for deletion
+                    myDataTable.Rows[currentRecord].Delete();
+                    // commit the deletion to database
+                    UpdateDB();
+                    currentRecord = 0;
+                    DisplayRow(currentRecord);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error in deleteButton_Click: \r\n" + ex.Message);
+                }
+            }
+        }
+
+        private void UpdateDB()
+        {
+            try
+            {
+                myConnection.Open();
+                myAdapter.Update(myDataTable);
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in methods of updating : \r\n" + ex.Message);
             }
         }
 

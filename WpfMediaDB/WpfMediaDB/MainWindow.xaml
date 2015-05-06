@@ -59,8 +59,9 @@
                 <Button Content="Previous" x:Name="prevButton" Width="80" Height="30" Margin="0,0,10,0" Click="prevButton_Click" />
                 <Button Content="Next" x:Name="nextButton" Width="80" Height="30" Margin="0,0,10,0" Click="nextButton_Click" />
                 <Button Content="Last" x:Name="lastButton" Width="80" Height="30" Margin="0,0,10,0" Click="lastButton_Click" />
-                <Button Content="Modify" x:Name="modifyButton" Width="80" Height="30" Margin="0,5.5,10,5.5" Click="modify_Click" />
-                <Button Content="Add" x:Name="addButton" Width="80" Height="30" Margin="0,5.5,10,5.5" Click="addButton_Click" />
+                <Button Content="Modify" x:Name="modifyButton" Width="80" Height="30" Margin="0,0,10,0" Click="modify_Click" />
+                <Button Content="Add" x:Name="addButton" Width="80" Height="30" Margin="0,0,10,0" Click="addButton_Click" />
+                <Button Grid.Column="0" Grid.Row="4" Content="Delete" x:Name="deleteButton" Width="80" Height="30" Margin="0, 0, 8, 0" Click="deleteButton_Click" Background="IndianRed"/>
             </StackPanel>
         </Grid>
         
