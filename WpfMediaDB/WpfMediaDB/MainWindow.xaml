@@ -11,6 +11,7 @@
         
         <Menu Grid.Row="0">
             <MenuItem Header="_File">
+                <MenuItem Header="_Open" Name="openMenuButton" Click="openMenuButton_Click"/>
                 <MenuItem Header="_Exit" Name="exitMenuButton" Click="exitMenuButton_Click"/>
             </MenuItem>
         </Menu>
@@ -61,7 +62,7 @@
                 <Button Content="Last" x:Name="lastButton" Width="80" Height="30" Margin="0,0,10,0" Click="lastButton_Click" />
                 <Button Content="Modify" x:Name="modifyButton" Width="80" Height="30" Margin="0,0,10,0" Click="modify_Click" />
                 <Button Content="Add" x:Name="addButton" Width="80" Height="30" Margin="0,0,10,0" Click="addButton_Click" />
-                <Button Content="Open" x:Name="openButton" Width="80" Height="30" Margin="0,0,10,0" Click="openButton_Click" />
+                <Button Content="Open" x:Name="openButton" Width="80" Height="30" Margin="0,0,10,0" Click="openMenuButton_Click" />
                 <Button Grid.Column="0" Grid.Row="4" Content="Delete" x:Name="deleteButton" Width="80" Height="30" Margin="0, 0, 8, 0" Click="deleteButton_Click" Background="IndianRed"/>
             </StackPanel>
         </Grid>

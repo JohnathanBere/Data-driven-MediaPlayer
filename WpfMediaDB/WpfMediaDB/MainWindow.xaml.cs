@@ -33,6 +33,8 @@ namespace WpfMediaDB
         // Index of the current record
         private int currentRecord = 0;
 
+        audioPlayer music;
+        ID3v1Tag tagReader;
         
         public MainWindow()
         {
@@ -215,9 +217,17 @@ namespace WpfMediaDB
             }
         }
 
-        private void openButton_Click(object sender, RoutedEventArgs e)
+        private void openMenuButton_Click(object sender, RoutedEventArgs e)
         {
+            // Open a file with the appropriate parameters.
             var ofd = new OpenFileDialog();
+            ofd.Filter = "Audio files (*.mp3; *.mpg; *mpeg; *.wav; *.aac)| *.mp3; *.mpg; *mpeg; *.wav; *.aac";
+            if (ofd.ShowDialog() == true)
+            {
+                music = new audioPlayer();
+
+            }
+
         }
 
         private void exitMenuButton_Click(object sender, RoutedEventArgs e)
