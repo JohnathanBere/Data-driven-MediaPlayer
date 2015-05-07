@@ -18,7 +18,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <ToolBar>
-            <Button Command="MediaCommands.Play">Open</Button>
+            <Button Command="ApplicationCommands.Open">Open</Button>
             <Separator />
             <Button Command="MediaCommands.Play">Play</Button>
             <Button Command="MediaCommands.Pause">Pause</Button>
