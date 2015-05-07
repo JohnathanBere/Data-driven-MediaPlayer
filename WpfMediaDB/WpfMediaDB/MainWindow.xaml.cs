@@ -107,22 +107,32 @@ namespace WpfMediaDB
 
         private void nextButton_Click(object sender, RoutedEventArgs e)
         {
-            // check if we are the at the end of the table before trying to
-            // display the next record
 
-            if (currentRecord < myDataTable.Rows.Count - 1)
+            if (currentRecord != myDataTable.Rows.Count - 1)
             {
                 currentRecord++;
                 DisplayRow(currentRecord);
+            }
+            else
+            {
+                const string caption = "Can't go further";
+                const string message = "Reached final entry";
+                var result = MessageBox.Show(message, caption);
             }
         }
 
         private void prevButton_Click(object sender, RoutedEventArgs e)
         {
-            if (currentRecord <= myDataTable.Rows.Count)
+            if (currentRecord > 0)
             {
                 currentRecord--;
                 DisplayRow(currentRecord);
+            }
+            else
+            {
+                const string caption = "Can't go further back";
+                const string message = "At first entry";
+                var result = MessageBox.Show(message, caption);
             }
         }
 
@@ -134,7 +144,11 @@ namespace WpfMediaDB
 
         private void lastButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (currentRecord != myDataTable.Rows.Count - 1)
+            {
+                currentRecord = myDataTable.Rows.Count - 1;
+                DisplayRow(currentRecord);
+            }
         }
 
         private void modify_Click(object sender, RoutedEventArgs e)
@@ -169,7 +183,7 @@ namespace WpfMediaDB
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to remove this song entry?", "Delete Record", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Are you sure you want to remove this song entry?", "Delete song", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
@@ -203,7 +217,7 @@ namespace WpfMediaDB
 
         private void openButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var ofd = new OpenFileDialog();
         }
 
         private void exitMenuButton_Click(object sender, RoutedEventArgs e)

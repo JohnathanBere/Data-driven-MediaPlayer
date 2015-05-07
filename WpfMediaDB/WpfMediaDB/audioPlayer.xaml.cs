@@ -25,9 +25,5 @@ namespace WpfMediaDB
             InitializeComponent();
         }
 
-        private void playToggleButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }
